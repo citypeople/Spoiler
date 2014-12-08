@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#umispoiler_dlg.title}</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+
+<form onsubmit="UmiSpoilerDialog.insert(); return false;" action="#">
+	<p><strong>Параметры спойлера</strong></p>
+  <table style="border: 0;">
+    <tr>
+      <td style="vertical-align: top;">
+        <span>Заголовок:</span>
+      </td>
+      <td>
+        <input id="caption" name="caption" type="text" class="text" style="width: 435px;" />
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+        <span>Текст:</span>
+      </td>
+      <td>
+        <textarea cols="100" rows="6" id="text" name="text"></textarea>
+      </td>
+    </tr>
+  </table>
+
+	<div class="mceActionPanel" style="text-align: right;">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="UmiSpoilerDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>
